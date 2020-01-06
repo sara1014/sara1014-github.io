@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>game of life</title>
+
+    <!-- Custom fonts for this theme -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/life.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Conway's Game of Life</a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">about</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">game</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header>
+        <!--class="masthead bg-primary text-white text-center"-->
+        <div class="container d-flex align-items-center flex-column">
+            <div img src="./img/01.jpg" alt></div>
+            <!-- Masthead Avatar Image -->
+            <img src="./img/01.jpg" alt="">
+            <!--  <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+-->
+            <!-- Masthead Heading -->
+            <h1 class="masthead-heading text-uppercase mb-0">Conway's Game of Life</h1>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <!-- Masthead Subheading -->
+            <p class="masthead-subheading font-weight-light mb-0">Creating an initial configuration and observing how it evolves.</p>
+
+        </div>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+
+            <!-- Portfolio Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">About the game</h2>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <!-- Portfolio Grid Items -->
+            <div class="row">
+
+                <!-- Portfolio Item 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" style="width:288.88px">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                                <!--加號底下-->
+                                <div>簡介</div>
+                            </div>
+                        </div>
+                        <img class="img-fluid" style="width:288.88px" src="./img/1.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2" style="width:288.88px">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                                <div>規則</div>
+                            </div>
+                        </div>
+                        <img class="img-fluid" style="width:288.88px" src="./img/2.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3" style="width:288.88px">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                                <div>概述</div>
+                            </div>
+                        </div>
+                        <img class="img-fluid" style="width:288.88px" src="./img/3.png" alt="">
+                    </div>
+                </div>
+
+                <!--Portfolio Item 4-->
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4" style="width:288.88px">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                                <div>穩定狀態</div>
+                            </div>
+                        </div>
+                        <img class="img-fluid" style="width:288.88px" src="./img/4.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" style="width:288.88px">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                                <div>震盪狀態</div>
+                            </div>
+                        </div>
+                        <img class="img-fluid" style="width:288.88px" src="./img/5.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6" style="width:288.88px">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                                <div>會移動的震盪狀態</div>
+                            </div>
+
+                        </div>
+                        <img class="img-fluid" style="width:288.88px" src="./img/6.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+    </section>
+
+    <!--  <div id="gridContainer">
+
+    </div>
+
+    <div class="controls">
+        <button id="start"><span>Start</span></button>
+        <button id="clear"><span>Clear</span></button>
+        <button id="random"><span>Random</span></button>
+    </div>-->
+
+
+
+    <!-- About Section -->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+
+            <!-- About Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-white">Start the game</h2>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+        <div style="text-align:center;">
+            <div style="text-align:center; margin-left:390px" id="gridContainer">
+
+            </div>
+
+            <div class="controls">
+                <button id="start"><span>Start</span></button>
+                <button id="clear"><span>Clear</span></button>
+                <button id="random"><span>Random</span></button>
+            </div>
+        </div>
+        <div style="text-align:center;">
+            <!--- <p>按了“clear“後紅點不會消失，但不影響下次結果</p>-->
+        </div>
+        <!-- About Section Content -->
+        <!--<div class="row">
+                <div class="col-lg-4 ml-auto">
+                    <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+                </div>
+                <div class="col-lg-4 mr-auto">
+                    <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
+                </div>
+            </div>-->
+
+        <!-- About Section Button -->
+        <!-- <div class="text-center mt-4">
+                <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
+                    <i class="fas fa-download mr-2"></i> Free Download!
+                </a>
+            </div>-->
+
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="page-section" id="contact">
+        <div class="container">
+
+            <!-- Contact Section Heading -->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+
+            <!-- Icon Divider -->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <!-- Contact Section Form -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Name</label>
+                                <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Email Address</label>
+                                <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Phone Number</label>
+                                <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                <label>Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+
+                <!-- Footer Location 
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">2215 John Daniel Drive
+                        <br>Clark, MO 65243</p>
+                </div>-->
+
+                <!-- Footer Social Icons -->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://zh.wikipedia.org/wiki/%E5%BA%B7%E5%A8%81%E7%94%9F%E5%91%BD%E6%B8%B8%E6%88%8F">
+                        <i class="fab fa-fw fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="./program.html">
+                        <i class="fab fa-fw fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#">
+                        <i class="fab fa-fw fa-linkedin-in"></i>
+                    </a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="#">
+                        <i class="fab fa-fw fa-dribbble"></i>
+                    </a>
+                </div>
+
+                <!-- Footer About Texthref="./html/program7.html " -->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                    <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by
+                        <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright Section -->
+    <section class="copyright py-4 text-center text-white">
+        <div class="container">
+            <small>Copyright &copy; Your Website 2019</small>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title -->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">簡介</h2>
+                                <!-- Icon Divider -->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon">
+                                        <i class="fas fa-star"></i>
+                                        <!--<div>簡介</div>-->
+                                    </div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image -->
+                                <img class="img-fluid rounded mb-5" img src="./img/02.gif" alt="">
+                                <!-- Portfolio Modal - Text -->
+                                <p class="mb-5">康威生命遊戲（英語：Conway's Game of Life），又稱康威生命棋，是英國數學家約翰·何頓·康威在1970年發明的細胞自動機。 它最初於1970年10月在《科學美國人》雜誌上馬丁·葛登能的「數學遊戲」專欄出現。
+                                </p>
+                                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title -->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">規則</h2>
+                                <!-- Icon Divider -->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image -->
+                                <img class="img-fluid rounded mb-5" src="./img/03.gif" alt="">
+                                <!-- Portfolio Modal - Text -->
+                                <p class="mb-5">生命遊戲中，對於任意細胞，規則如下：
+                                </p>
+                                <p class="mb-5">
+                                    每個細胞有兩種狀態 - 存活或死亡，每個細胞與以自身為中心的周圍八格細胞產生互動
+                                </p>
+                                <p class="mb-5">
+                                    當前細胞為存活狀態時，當周圍的存活細胞低於2個時，該細胞變成死亡狀態。（模擬生命稀少）
+                                </p>
+                                <p class="mb-5">
+                                    當前細胞為存活狀態時，當周圍有2個或3個存活細胞時，該細胞保持原樣。
+                                </p>
+                                <p class="mb-5">
+                                    當前細胞為存活狀態時，當周圍有超過3個存活細胞時，該細胞變成死亡狀態。（模擬生命過多）
+                                </p>
+                                <p class="mb-5">
+                                    當前細胞為死亡狀態時，當周圍有3個存活細胞時，該細胞變成存活狀態。（模擬繁殖）
+                                </p>
+                                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title -->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">概述</h2>
+                                <!-- Icon Divider -->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image -->
+                                <img class="img-fluid rounded mb-5" src="./img/04.gif" alt="">
+                                <!-- Portfolio Modal - Text -->
+                                <p class="mb-5">生命遊戲是一個零玩家遊戲。它包括一個二維矩形世界，這個世界中的每個方格居住著一個活著的或死了的細胞。一個細胞在下一個時刻生死取決於相鄰八個方格中活著的或死了的細胞的數量。如果相鄰方格活著的細胞數量過多，這個細胞會因為資源匱乏而在下一個時刻死去；相反，如果周圍活細胞過少，這個細胞會因太孤單而死去。實際中，玩家可以設定周圍活細胞的數目怎樣時才適宜該細胞的生存。如果這個數目設定過高，世界中的大部分細胞會因為找不到太多的活的鄰居而死去，直到整個世界都沒有生命；如果這個數目設定過低，世界中又會被生命充滿而沒有什麼變化。</p>
+                                <p class="mb-5">
+                                    實際中，這個數目一般選取2或者3；這樣整個生命世界才不至於太過荒涼或擁擠，而是一種動態的平衡。這樣的話，遊戲的規則就是：當一個方格周圍有2或3個活細胞時，方格中的活細胞在下一個時刻繼續存活；即使這個時刻方格中沒有活細胞，在下一個時刻也會「誕生」活細胞。
+                                </p>
+                                <p class="mb-5">
+                                    在這個遊戲中，還可以設定一些更加複雜的規則，例如當前方格的狀況不僅由父一代決定，而且還考慮祖父一代的情況。玩家還可以作為這個世界的「上帝」，隨意設定某個方格細胞的死活，以觀察對世界的影響。
+                                </p>
+                                <p class="mb-5">
+                                    在遊戲的進行中，雜亂無序的細胞會逐漸演化出各種精緻、有形的結構；這些結構往往有很好的對稱性，而且每一代都在變化形狀。一些形狀已經鎖定，不會逐代變化。有時，一些已經成形的結構會因為一些無序細胞的「入侵」而被破壞。但是形狀和秩序經常能從雜亂中產生出來。
+                                </p>
+                                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title -->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">穩定狀態</h2>
+                                <!-- Icon Divider -->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image -->
+                                <img class="img-fluid rounded mb-5" src="./img/05.gif" alt="">
+                                <!-- Portfolio Modal - Text -->
+                                <p class="mb-5">
+                                    <table>
+                                        <tr>
+                                            <th>板凳</th>
+                                            <th>麵包</th>
+                                            <th>蜂巢</th>
+                                            <th>大船</th>
+                                            <th>小船</th>
+                                            <th>花</th>
+                                        </tr>
+                                        <tr>
+                                            <td><img style="width: 120px;" src="./img/4-1.png" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/4-2.png" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/4-3.png" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/4-4.png" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/4-5.png" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/4-6.png" alt=""></td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <th>池塘</th>
+                                            <th>蛇</th>
+                                            <th>航空母艦</th>
+                                            <th>獨木舟</th>
+                                            <th>芒果</th>
+                                            <th>鴨子</th>
+                                        </tr>
+                                        <tr>
+                                            <td><img style="width: 120px;" src="./img/4-7.png" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/4-8.png" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/4-9.png" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/4-10.png" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/4-11.png" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/4-12.png" alt=""></td>
+                                        </tr>
+                                    </table>
+                                </p>
+                                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title -->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">震盪狀態</h2>
+                                <!-- Icon Divider -->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image -->
+                                <img class="img-fluid rounded mb-5" src="./img/06.gif" alt="">
+                                <!-- Portfolio Modal - Text -->
+                                <p class="mb-5">
+                                    <table>
+                                        <tr>
+                                            <th>信號燈</th>
+                                            <th>蟾蜍</th>
+                                            <th>紅綠燈</th>
+                                            <th>烽火</th>
+                                            <th>脈衝星</th>
+                                            <th>慨影</th>
+                                        </tr>
+                                        <tr>
+                                            <td><img style="width: 120px;" src="./img/5-1.gif" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/5-2.gif" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/5-3.gif" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/5-4.gif" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/5-5.gif" alt=""></td>
+                                            <td><img style="width: 120px;" src="./img/5-6.gif" alt=""></td>
+                                        </tr>
+                                    </table>
+                                </p>
+                                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title -->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">會移動的震盪狀態</h2>
+                                <!-- Icon Divider -->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image -->
+                                <img class="img-fluid rounded mb-5" src="./img/07.gif" alt="">
+                                <!-- Portfolio Modal - Text -->
+                                <p class="mb-5">
+                                    <table>
+                                        <tr>
+                                            <th>滑翔機</th>
+                                            <th>太空船</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td><img style="width: 160px;" src="./img/6-1.gif" alt=""></td>
+                                            <td><img style="width: 160px;" src="./img/6-2.gif" alt=""></td>
+
+                                        </tr>
+                                    </table>
+                                </p>
+                                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="css/conway.css"></script>
+    <script src="js/code.js"></script>
+</body>
+
+</html>
